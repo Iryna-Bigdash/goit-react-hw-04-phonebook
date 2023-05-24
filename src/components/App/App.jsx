@@ -27,15 +27,6 @@ export default function App() {
       : setContacts(prevState => [contact, ...prevState]);
   };
 
-  // як передавати Props, якщо юзаємо useMemo ???
-
-  // const getVisibleContacts = useMemo(() => {
-  // const normalizedFilter = filterContacts.toLowerCase().trim();
-  //   return contacts.filter(contact =>
-  //     contact.name.toLowerCase().includes(normalizedFilter)
-  //   );
-  // }, [contacts, filterContacts])
-
   const getVisibleContacts = () => {
     const normalizedFilter = filterContacts.toLowerCase().trim();
 
